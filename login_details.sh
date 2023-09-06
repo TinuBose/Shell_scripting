@@ -6,6 +6,6 @@ then
 fi
 	last_login=$(last -n 1);
 	echo "last logged is $last_login"
-	login_attempts=$(sudo cat /var/log/auth.log | grep -E "$1 failed")
+	login_attempts=$(sudo cat /var/log/auth.log | grep failed)
 	echo "failed login attempts of $1 are : "
 	echo "here : $login_attempts"
